@@ -1,0 +1,223 @@
+:root {
+    /* --container-bg-color: rgb(0, 0, 0); */
+    --container-bg-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-hover-color: rgba(255, 255, 255, 0.3);
+    --test-hover-color: rgb(255, 0, 0);
+    --left-bg-color: rgba(255, 255, 255, 0.7);
+    --left-button-hover-color: rgba(133, 133, 133, 0.3);
+    --right-bg-color: rgba(0, 0, 0, 0);
+    --right-button-hover-color: rgba(14, 12, 12, 0.452);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+    }
+
+    html, body {
+        padding:0;
+        margin:0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--container-bg-color);
+    }
+
+    .split {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .split-left {
+        left:0;
+        /* background: url('https://image.ibb.co/m56Czw/designer.jpg') center center no-repeat; */
+        background-size: cover;
+        background: var(--left-bg-color);
+    }
+
+    .split-left:before {
+        position:absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--left-bg-color);
+    }
+
+    .split.right {
+        right:0;
+        /* background: url('https://image.ibb.co/m3ZbRb/programmer.png') center center no-repeat; */
+        background-size: cover;
+    }
+
+    .split.right:before {
+        position:absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--right-bg-color);
+    }
+
+    .split.left, .split.right, .split.right:before, .split.left:before {
+        transition: var(--speed) all ease-in-out;
+    }
+
+
+  /* .button {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 2.5rem;
+    padding-top: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+  } */
+
+    h1 {
+        color: var(--text-color);
+        position: relative;
+        left: 5%;
+        top: 5%;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 4rem;
+        /* transform: translateX(-50%); */
+        /* white-space: nowrap; */
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .menu {
+        position: relative;
+        left: 5%;
+        font-size: 2rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .sub-menu {
+        display: none;
+        position: relative;
+        font-size: 1.5rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    .menu::before {
+        /* content: "\25B6"; */
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    .caret-down::before {
+        transform: rotate(90deg);
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    .active {
+        display: block;
+    }
+
+    .collapsible {
+        background-color: var(--left-bg-color);
+        color: var(--text-color);
+        cursor: pointer;
+        padding: 10px;
+        /* width: 100%; */
+        /* border: none; */
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+        color: var(--test-hover-color);
+    }
+
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .split.left .button:hover {
+        background-color: var(--left-button-hover-color);
+        border-color: var(--left-button-hover-color);
+    }
+
+    .split.right .button:hover {
+        background-color: var(--right-button-hover-color);
+        border-color: var(--right-button-hover-color);
+    }
+
+    .collapsible-sub {
+        background-color: var(--left-bg-color);
+        color: var(--text-color);
+        font-size: 13px;
+    }
+
+
+
+
+
+  .hover-left .left {
+    width: var(--hover-width);
+  }
+
+  .hover-left .right {
+    width: var(--other-width);
+  }
+
+  .hover-left .right:before {
+    z-index: 2;
+  }
+
+
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+
+  .hover-right .left {
+    width: var(--other-width);
+  }
+
+  .hover-right .left:before {
+    z-index: 2;
+  }
+
+  @media(max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .button {
+      width: 12rem;
+    }
+  }
+
+  @media(max-height: 700px) {
+    .button {
+      top: 70%;
+    }
+  }
