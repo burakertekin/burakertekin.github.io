@@ -4,9 +4,9 @@
     --text-color: rgb(0, 0, 0);
     --text-hover-color: rgba(255, 255, 255, 0.01);
     --test-hover-color: rgb(255, 0, 0);
-    --left-bg-color: rgba(255, 255, 255, 0);
+    --left-bg-color: rgba(255, 255, 255, 1);
     --left-button-hover-color: rgba(133, 133, 133, 0.3);
-    --right-bg-color: rgba(0, 0, 0, 0);
+    --right-bg-color: rgba(0, 0, 0, 1);
     --right-button-hover-color: rgba(14, 12, 12, 0.452);
     --hover-width: 75%;
     --other-width: 25%;
@@ -23,25 +23,26 @@
         overflow-x: hidden;
     }
 
-    /* .container {
+    .container {
         position: relative;
         width: 100%;
         height: 100%;
         background: var(--container-bg-color);
-    } */
+    }
 
-    /* .split {
+    .split {
         position: absolute;
         width: 50%;
         height: 100%;
         overflow: hidden;
-    } */
+        background: var(--left-bg-color);
+    }
 
     .split.left {
         left:0;
-        /* background: url('https://image.ibb.co/m56Czw/designer.jpg') center center no-repeat; */
-        background-size: cover;
         background: var(--left-bg-color);
+        background-size: cover;
+
     }
 
     .split.left:before {
@@ -56,7 +57,7 @@
         right:0;
         /* background: url('https://image.ibb.co/m3ZbRb/programmer.png') center center no-repeat; */
         background-size: cover;
-        background: var(--right-bg-color);
+        /* background: var(--right-bg-color); */
     }
 
     .split.right:before {
@@ -104,6 +105,12 @@
 
     li {
         list-style: none;
+        border: dashed red;
+        white-space:nowrap;
+    }
+
+    ul {
+      white-space:nowrap;
     }
 
     .menu {
@@ -138,10 +145,10 @@
         color: var(--text-color);
     }
 
-    .active:hover {
-        /* color: var(--test-hover-color); */
+    /* .active:hover {
+        //color: var(--test-hover-color);
         color: var(--test-hover-color);
-    }
+    } */
 
     .inactive {
       display: none;

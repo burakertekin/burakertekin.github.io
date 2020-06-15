@@ -40,22 +40,23 @@ var i;
 for (i = 0; i < menutoggler.length; i++) {
     menutoggler[i].addEventListener("click", function() {
         this.parentElement.querySelector(".sub-menu").classList.toggle("active");
-        this.parentElement.querySelector(".sub2-menu").classList.toggle("inactive");
         // this.classList.toggle("caret-down");
     });
 }
 
 // sub-menu > sub2-menu toggle
-var submenutoggler = document.getElementsByClassName("sub-menu");
+var submenutoggler = document.getElementsByClassName("menu2");
 var i;
 
 for (i = 0; i < submenutoggler.length; i++) {
     submenutoggler[i].addEventListener("click", function() {
         this.parentElement.querySelector(".sub2-menu").classList.toggle("active");
-        this.parentElement.querySelector(".sub-menu").classList.toggle("inactive");
+        // this.parentElement.querySelector(".sub-menu").classList.toggle("inactive");
         // this.classList.toggle("caret-down");
     });
 }
+
+
 // // Execute this after the site is loaded.
 // $(function() {
 //     // Find list items representing folders and style them accordingly.  Also, turn them
