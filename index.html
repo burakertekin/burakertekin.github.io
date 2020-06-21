@@ -7,61 +7,42 @@
     <link rel="stylesheet" href="style.css">
     <title>Basak Ertekin</title>
 </head>
-<body>
+<body onload="hideSubMenus()">
 <div class="container">
     <div class="split left">
         <h1 href="#">Basak Ertekin</h1>
         <ul>
-        <li><span class="menu">WORKS</span>
-            <ul class="sub-menu">
-                <li><span class="menu2">PAINTINGS</span>
-                    <ul class="sub2-menu">
-                        <li>2020 - SOKAK</li>
-                        <li>2020 - ODA</li>
-                        <li>2020 - PERDE</li>
-                    </ul>
-                </li>
-                <li><span class="menu2">MURALS</span>
-                    <ul class="sub2-menu">
-                        <li>2018 - SU COSPACE</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><span class="menu">EXHIBITIONS</span>
-            <ul class="sub-menu">
-                <li>2020</li>
-                <li>2019</li>
-            </ul>
-            <!-- <li class="collapsible">WORKS</li> -->
-            <!-- <div class="works-content">
-                <li class="collapsible-sub">PAINTINGS</li>
-                <div class="content">
-                    <p>isler falan filan buraya</p>
-                </div>
-                <button type="button" class="collapsible-sub">MURALS</button>
-                <div class="content">
-                    <p>isler falan filan buraya</p>
-                </div>
-            </div>
-            <button type="button" class="collapsible">EXHIBITIONS</button>
-            <div class="exhibitions-content">
-                <p>buraya sergi mergi</p>
-            </div>
-            <button type="button" class="collapsible">BIO</button>
-            <div class="content">
-                <p>biyografi felan</p>
-            </div>
-            <button type="button" class="collapsible">CONTACT</button>
-            <div class="content">
-                <p>ara beni tarabeni.</p>
-            </div> -->
-        </li>
-    </ul>
+            <li class="menu" style="--fontsize: 2rem;">WORKS
+                <ul>
+                    <li class="submenu" style="--fontsize: 1.5rem;">PAINTINGS
+                        <ul>
+                            <li class="item" style="--fontsize: 1rem;">2020 - SOKAK</li>
+                            <li class="item" style="--fontsize: 1rem;">2020 - ODA</li>
+                            <li class="item" style="--fontsize: 1rem;">2020 - PERDE</li>
+                        </ul>
+                    </li>
+                    <li class="submenu" style="--fontsize: 1.5rem;">MURALS
+                        <ul>
+                            <li class="item" style="--fontsize: 1rem;">2018 - SU COSPACE</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu" style="--fontsize: 2rem;">EXHIBITIONS
+                <ul>
+                    <li class="submenu" style="--fontsize: 1rem;">2020</li>
+                    <li class="submenu" style="--fontsize: 1rem;">2019</li>
+                </ul>
+            </li>
+            <li class="menu" style="--fontsize: 2rem;">BIO</li>
+            <li class="menu" style="--fontsize: 2rem;">CONTACT</li>
+        </ul>
     </div>
     <div class="split right">
     </div>
 </div>
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="main.js"></script>
+</body>
+
 </html>

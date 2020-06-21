@@ -1,6 +1,5 @@
 :root {
     --container-bg-color: rgb(0, 0, 0);
-    /* --container-bg-color: rgb(255, 255, 255); */
     --text-color: rgb(0, 0, 0);
     --text-hover-color: rgba(255, 255, 255, 0.01);
     --test-hover-color: rgb(255, 0, 0);
@@ -103,41 +102,38 @@
         /* white-space: nowrap; */
     }
 
-    li {
-        list-style: none;
-        border: dashed red;
-        white-space:nowrap;
+    ul li.menu{
+      list-style: none;
+      white-space:nowrap;
+      /* border: dashed blue; */
     }
 
-    ul {
+    li {
+      list-style: none;
+      /* border: dashed red; */
       white-space:nowrap;
     }
 
     .menu {
-        position: relative;
-        left: 5%;
-        font-size: 2rem;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    .sub-menu {
-        display: none;
-        left: 5%;
-        position: relative;
-        font-size: 1.75rem;
-        cursor: pointer;
-        user-select: none;
-
-    }
-    .sub2-menu {
-      display: none;
-      left: 5%;
       position: relative;
-      font-size: 1.5rem;
+      font-size: var(--fontsize);
       cursor: pointer;
       user-select: none;
-  }
+    }
+
+    .submenu {
+      position: relative;
+      font-size: var(--fontsize);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .item {
+      position: relative;
+      font-size: var(--fontsize);
+      cursor: pointer;
+      user-select: none;
+    }
 
     /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
     .active {
